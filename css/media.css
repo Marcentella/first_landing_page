@@ -1,0 +1,134 @@
+/* Navbar */
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .search-box{
+        display: none;
+    }
+
+    .search-box.active{
+        display: flex;
+        margin: auto;
+    }
+}
+
+/* Portada */
+
+@media only screen and (max-width: 480px){
+    section {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    #h1wrap h1{
+        font-size: 29px;
+        margin: 0 40rem 0;
+        padding-left: 80px;
+        width: 32rem;
+    }
+    
+    #pwrap p{
+        font-size: 20px;
+        margin: 10px 40rem 0;
+        width: 22rem;
+    }
+
+    #join{
+        margin-left: 8em;
+        margin-top: 15px;
+    }
+}
+
+/* Beneficios compra y venta */
+
+@media only screen and (max-width: 1000px){
+    
+    #firstimg{
+        display: none;
+    }
+
+    #secondimg{
+        display: none;
+    }    
+
+    .column{
+        margin: auto 50px auto 50px;
+    }
+
+    .text-box{
+        font-size: 18px;
+        text-align: center !important;
+        width: 100%;
+        align-items: center;
+    }
+
+    .text-box h2{
+        font-size: 32px;
+    }
+
+    .text-box p{
+        width: 80vw;
+    }
+}
+
+/* Form */
+
+@media only screen and (max-width: 600px){
+    .inputform{
+        width: 70vw;
+    }
+
+    #btnsignin{
+        width: 70vw;
+    }
+}
+
+/* Footer */
+
+@media only screen and (max-width: 700px){
+    #social{
+        margin-bottom: 10px;
+
+    }
+    
+    #newsletter{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #newsletter div{
+        margin-top: 14px;
+    }
+}
