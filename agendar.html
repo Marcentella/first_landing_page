@@ -1,0 +1,169 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Morada Propiedades</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Maitree:wght@200;300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icon" href="./assets/LMP.png">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/agendar.css">
+    <style>
+      .property-card {
+          margin-bottom: 20px;
+      }
+      .success-message {
+          display: none;
+      }
+  </style>
+    
+</head>
+<body>
+    <!-- Navbar -->
+
+    <nav class="navbar">
+        <a href="index.html" class="brand-title"><img src="./assets/lamoradawhitefont.png" alt="La Morada Logo" id="logo" /></a>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        
+        <div class="navbar-links">
+          <ul>
+            <li><a href="#">Características</a></li>
+            <li><a href="#">Precios</a></li>
+            <li><a href="#">Ayuda</a></li>
+          </ul>
+        </div>
+
+        <div id="loginwrap">
+            <a id="login" href="login.html">
+                <i class="fa-regular fa-calendar-plus"></i>
+                <span>Agenda tu visita</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Propiedades -->
+
+    <div class="container">
+      <h1 class="mb-4">Agendar Visitas a Propiedades</h1>
+
+      <div class="row mb-3">
+          <div class="col-md-3">
+              <label for="tipoPropiedad" class="white">Tipo de Propiedad</label>
+              <select class="form-control" id="tipoPropiedad">
+                  <option value="">Todos</option>
+                  <option value="Casa">Casa</option>
+                  <option value="Departamento">Departamento</option>
+                  <option value="Terreno">Terreno</option>
+              </select>
+          </div>
+          <div class="col-md-3">
+              <label for="comuna" class="white">Comuna</label>
+              <select class="form-control" id="comuna">
+                  <option value="">Todas</option>
+                  <option value="Cerrillos">Cerrillos</option>
+                  <option value="Cerro Navia">Cerro Navia</option>
+                  <option value="Conchalí">Conchalí</option>
+                  <option value="El Bosque">El Bosque</option>
+                  <option value="Estación Central">Estación Central</option>
+                  <option value="Huechuraba">Huechuraba</option>
+                  <option value="Independencia">Independencia</option>
+                  <option value="La Cisterna">La Cisterna</option>
+                  <option value="La Florida">La Florida</option>
+                  <option value="La Granja">La Granja</option>
+                  <option value="La Pintana">La Pintana</option>
+                  <option value="La Reina">La Reina</option>
+                  <option value="Las Condes">Las Condes</option>
+                  <option value="Lo Barnechea">Lo Barnechea</option>
+                  <option value="Lo Espejo">Lo Espejo</option>
+                  <option value="Lo Prado">Lo Prado</option>
+                  <option value="Macul">Macul</option>
+                  <option value="Maipú">Maipú</option>
+                  <option value="Ñuñoa">Ñuñoa</option>
+                  <option value="Pedro Aguirre Cerda">Pedro Aguirre Cerda</option>
+                  <option value="Peñalolén">Peñalolén</option>
+                  <option value="Providencia">Providencia</option>
+                  <option value="Pudahuel">Pudahuel</option>
+                  <option value="Quilicura">Quilicura</option>
+                  <option value="Quinta Normal">Quinta Normal</option>
+                  <option value="Recoleta">Recoleta</option>
+                  <option value="Renca">Renca</option>
+                  <option value="San Joaquín">San Joaquín</option>
+                  <option value="San Miguel">San Miguel</option>
+                  <option value="San Ramón">San Ramón</option>
+                  <option value="Santiago">Santiago</option>
+                  <option value="Vitacura">Vitacura</option>
+              </select>
+          </div>
+          <div class="col-md-3 align-self-end">
+              <button class="btn btn-primary" id="filterButton">Filtrar</button>
+          </div>
+      </div>
+
+      <div id="propertyList">
+        
+          <!-- Las tarjetas de propiedades se agregarán aquí dinámicamente -->
+      </div>
+  
+      <div id="successMessage" class="alert alert-success success-message" role="alert">
+        <i class="fa-regular fa-circle-check"></i>
+          Visita agendada con éxito. <br> Espere confirmación.
+      </div>
+  </div>
+
+  <!-- Modal para capturar datos del usuario -->
+  <div class="modal fade" id="agendaModal" tabindex="-1" role="dialog" aria-labelledby="agendaModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="agendaModalLabel">Confirmar Visita</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <form id="agendaForm">
+                      <div class="form-group">
+                          <label for="nombre">Nombre</label>
+                          <input type="text" class="form-control" id="nombre" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="rut">RUT (Formato 123.456.789-0)</label>
+                          <input type="text" class="form-control" id="rut" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="telefono">Número Telefónico</label>
+                          <input type="tel" class="form-control" id="telefono" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="correo">Correo Electrónico</label>
+                          <input type="email" class="form-control" id="correo" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="correo">Fecha Visita</label>
+                          <input type="date" class="form-control" id="fecha" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="correo">Hora Visita</label>
+                          <input type="time" class="form-control" id="hora" required>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Enviar</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <script src="js/agendar.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/238f7a97da.js" crossorigin="anonymous"></script>
+</html>

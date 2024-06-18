@@ -1,0 +1,113 @@
+/*Login styles*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+body{
+    background-color: #0c0711;
+    background-image: url(../assets/loginbackground.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-y: auto;
+}
+
+/*Login button*/
+
+#loginwrap{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    background-color: #7a2e94;
+    border-radius: 6px;
+    padding: 5px;
+    transition: 0.2s;
+}
+
+#loginwrap:hover{
+    scale: 1.08;
+    transition: 0.2s;
+}
+
+#login{
+    text-decoration: none;
+    font-family: sans-serif;
+    color: white;
+    font-size: 17px;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.fa-user{
+    color: white;
+}
+
+/*Login card*/
+
+.overlay-gradient{
+    background: rgb(32,2,37);
+    background: linear-gradient(0deg, rgba(32,2,37,0.8155637254901961) 0%, rgba(50,9,57,0.711922268907563) 47%, rgba(50,9,57,0.45702030812324934) 81%, rgba(50,9,57,0.0844712885154062) 100%);
+    height: 100vh;
+}
+
+.card-wrapper{
+    width: 40vw;
+}
+
+@media only screen and (max-width: 1000px){
+    .card-wrapper {
+        width: 80vw;
+    }
+}
+
+
+
+.card{
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    backdrop-filter: blur(10px) saturate(180%);
+    background-color: rgba(63, 40, 55, 0.5);
+    color: white;
+    inset: 0;
+    top: 30vh;
+}
+
+.form-control{
+    transition: 0.2s;
+}
+
+input{
+    color: black !important;
+}
+
+#username{
+    color: black !important;
+}
+
+#password{
+    color: black !important;
+}
+
+.form-control:focus, .form-control:active{
+    transform: scale(1.03);
+    transition: 0.2s;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none;
+}
+
+.btn{
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background-color: rgb(78, 0, 57);
+    color: white;
+    transition: 0.2s;
+}
+

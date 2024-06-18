@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Morada Propiedades</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Maitree:wght@200;300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icon" href="./assets/LMP.png">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/crud.css">
+    
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="brand-title"><img src="./assets/lamoradawhitefont.png" alt="La Morada Logo" id="logo" /></a>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        
+        <div class="navbar-links">
+          <ul>
+            <li><a href="#">Características</a></li>
+            <li><a href="#">Precios</a></li>
+            <li><a href="#">Ayuda</a></li>
+          </ul>
+        </div>
+
+        <div>
+        </div>
+    </nav>
+
+    <!-- CRUD Propiedades-->
+
+    <div class="container my-5">
+        <h1 class="mb-4">Gestión de Propiedades</h1>
+        <form id="propertyForm" class="mb-4">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="propertyName">Nombre de la Propiedad</label>
+                    <input type="text" id="propertyName" class="form-control" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="propertyType">Tipo de Propiedad</label>
+                    <input type="text" id="propertyType" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="city">Ciudad</label>
+                    <input type="text" id="city" class="form-control" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="commune">Comuna</label>
+                    <input type="text" id="commune" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="address">Dirección</label>
+                <input type="text" id="address" class="form-control" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="ownerName">Nombre del Propietario</label>
+                    <input type="text" id="ownerName" class="form-control" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="ownerEmail">Correo del Propietario</label>
+                    <input type="email" id="ownerEmail" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="ownerPhone">Número Telefónico del Propietario</label>
+                <input type="tel" id="ownerPhone" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-block purple">Guardar</button>
+        </form>
+        
+        <table id="propertyTable" class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Tipo</th>
+                    <th>Ciudad</th>
+                    <th>Comuna</th>
+                    <th>Dirección</th>
+                    <th>Propietario</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se generan las filas -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/crud.js"></script>
+    <script src="https://kit.fontawesome.com/238f7a97da.js" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Morada Propiedades</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Maitree:wght@200;300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icon" href="./assets/LMP.png">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/nav.css">
+    
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="brand-title"><img src="./assets/lamoradawhitefont.png" alt="La Morada Logo" id="logo" /></a>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        
+        <div class="navbar-links">
+          <ul>
+            <li><a href="#">Características</a></li>
+            <li><a href="#">Precios</a></li>
+            <li><a href="#">Ayuda</a></li>
+          </ul>
+        </div>
+
+        <div id="loginwrap">
+            <a id="login" href="login.html">
+                <i class="fa-solid fa-user"></i>
+                <span>Iniciar Sesión</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="overlay-gradient">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h2 class="card-title">Iniciar sesión</h2>
+                        </div>
+                        <div class="card-body">
+                            <form onsubmit="return handleLogin(event)">
+                                <div class="form-group">
+                                    <label for="username">Usuario</label>
+                                    <input type="text" class="form-control" id="username" placeholder="Ingresa tu usuario">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Contraseña</label>
+                                    <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
+                                </div>
+                                <button type="submit" class="btn btn-block">Iniciar sesión</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/238f7a97da.js" crossorigin="anonymous"></script>
+</html>

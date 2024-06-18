@@ -1,0 +1,136 @@
+body{
+    background-color: #0c0711;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4e1542;
+    color: white;
+}
+
+.brand-title {
+    margin: .5rem;
+    margin-left: 1.5rem;
+}
+
+.brand-title img{
+    width: 150px;
+}
+
+.navbar-links {
+    height: 100%;
+    display: flex;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #dd74eb38;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 2.2rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#loginwrap{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    background-color: #7a2e94;
+    border-radius: 6px;
+    padding: 5px;
+    transition: 0.2s;
+}
+
+#loginwrap:hover{
+    scale: 1.08;
+    transition: 0.2s;
+}
+
+#login{
+    text-decoration: none;
+    font-family: sans-serif;
+    color: white;
+    font-size: 17px;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.fa-user{
+    color: white;
+}
+
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    #loginwrap{
+        margin-left: 20px;
+    }
+
+}

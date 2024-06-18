@@ -33,14 +33,14 @@
         display: flex;
     }
 
-    .search-box{
+/*     .search-box{
         display: none;
     }
 
     .search-box.active{
         display: flex;
         margin: auto;
-    }
+    } */
 }
 
 /* Portada */
